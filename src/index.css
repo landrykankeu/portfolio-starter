@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+input[type="email"]:focus ~ .input-text{
+  @apply text-blue-500 transform -translate-y-9 -translate-x-4 scale-75;
+}
+input[type="text"]:focus ~ .input-text{
+  @apply text-blue-500 transform -translate-y-9 -translate-x-3 scale-75;
+}
+textarea:focus ~ .input-text{
+  @apply text-blue-500 transform -translate-y-9 -translate-x-3 scale-75;
+}
 .btn {
   background: linear-gradient(
     92.23deg,
@@ -42,7 +52,7 @@
 
 @layer base {
   body {
-    @apply font-secondary text-lg leading-8 text-white;
+    @apply  font-secondary text-lg leading-8 text-white;
   }
   .h2 {
     @apply font-primary text-[32px] mb-6 tracking-[10%] uppercase;
